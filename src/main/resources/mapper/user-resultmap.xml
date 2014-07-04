@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace和定义的Mapper接口对应，并实现其中的方法 -->
+<mapper namespace="i.mybatis.dao.UserMapper">
+<!-- 
+   <resultMap type="i.mybatis.model.User" id="userResultMap">
+        <id property="id" column="id" />
+        <result column="username" property="username"/>
+        <result column="nickname" property="nickname"/>
+        <result column="email" property="email"/>
+   </resultMap>
+   <select id="getUserByUsername" resultMap="userResultMap">
+   		<![CDATA[         
+              select * from user where username = #{username}   
+         ]]> 
+   </select>
+    -->
+    
+   <select id="getUserByUsername" parameterType="java.lang.String" resultType="i.mybatis.model.User">
+   		<![CDATA[         
+              select * from user where username = #{username}   
+         ]]> 
+   </select>
+</mapper>

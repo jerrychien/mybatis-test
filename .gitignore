@@ -1,0 +1,6 @@
+/.settings
+/target
+/.project
+/.classpath
+/src/main/webapp/laohuSSO.js
+/src/main/resources/jdbc.properties
